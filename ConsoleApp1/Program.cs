@@ -25,44 +25,90 @@ namespace ConsoleApp1
 
             Console.WriteLine("Press Any Key to Apply damage to the player");
 
-            System.ConsoleKey weaponChar = Console.ReadKey(true).Key;
-            
-            if (weaponChar == ConsoleKey.D1)
-            {
-                ChangeWeapon(0);
-                ShowHUD();
-            }
-            else if (weaponChar == ConsoleKey.D2)
-            {
-                ChangeWeapon(1);
-                ShowHUD();
-            }
-            
-            else if (weaponChar == ConsoleKey.D3)
-            {
-                ChangeWeapon(2);
-                ShowHUD();
-            }
+            Console.ReadKey(true);
+            Takedamage(10);
 
-            else if (weaponChar == ConsoleKey.D4)
-            {
-                ChangeWeapon(3);
-                ShowHUD();
-            }
+            ShowHUD();
 
-            else if (weaponChar == ConsoleKey.D5)
-            {
-                ChangeWeapon(4);
-                ShowHUD();
-            }
-
-            else if (weaponChar == ConsoleKey.D6)
-            {
-                ChangeWeapon(5);
-                ShowHUD();
-            }
+            Console.WriteLine("Okay now press any key to change the weapon, and we'll apply some more damage");
 
             Console.ReadKey(true);
+
+            ChangeWeapon(1);
+
+            Takedamage(10);
+
+            ShowHUD();
+
+            Console.WriteLine("Press any key to cycle to the next weapon and take some more damage");
+
+            Console.ReadKey(true);
+
+            ChangeWeapon(2);
+
+            Takedamage(10);
+
+            ShowHUD();
+
+            Console.WriteLine("Press any to key to cycle next weapon etc.");
+
+            Console.ReadKey(true);
+
+            ChangeWeapon(3);
+
+            Takedamage(10);
+
+            ShowHUD();
+
+            Console.WriteLine("Just a couple more times");
+
+            Console.ReadKey(true);
+
+            ChangeWeapon(4);
+
+            Takedamage(10);
+
+            ShowHUD();
+
+            Console.WriteLine("Once more to see the last weapon");
+
+            Console.ReadKey(true);
+
+            ChangeWeapon(5);
+
+            Takedamage(10);
+
+            ShowHUD();
+
+            Console.WriteLine("Now, press any key to take an incredible amount of damage");
+
+            Console.ReadKey(true);
+
+            Takedamage(80);
+
+            ShowHUD();
+
+            Console.WriteLine("Press any key to gain back some health");
+
+            Console.ReadKey(true);
+
+            Heal(30);
+
+            ShowHUD();
+
+            Console.WriteLine("Good job! You can press any key to close the game");
+
+            Console.ReadKey(true);
+
+            //I'm not including this in the code but I don't want to forget how to do this so I'm keeping it here
+            //System.ConsoleKey weaponChar = Console.ReadKey(true).Key;
+
+            //if (weaponChar == ConsoleKey.D1)
+            //{
+            //ChangeWeapon(0);
+            //ShowHUD();
+            //}
+
         }
 
         static void ShowHUD()
